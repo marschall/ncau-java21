@@ -1,11 +1,9 @@
 package com.netcetera.ncau.java21.language;
 
 public sealed interface Expression {
-  // no need for permits since we're using inner classes
 
   int evaluate();
 
-  // no need for final since we're using records
   record ConstantExpression(int i) implements Expression {
 
     @Override
@@ -33,11 +31,11 @@ public sealed interface Expression {
 
   }
 
-//  record DivideExpression(Expression a, Expression b) implements Expression {
+//  record ModulusExpression(Expression a, Expression b) implements Expression {
 //
 //    @Override
 //    public int evaluate() {
-//      return Math.divideExact(a.evaluate(), b.evaluate());
+//      return Math.floorMod(a.evaluate(), b.evaluate());
 //    }
 //
 //  }
