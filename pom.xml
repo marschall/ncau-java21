@@ -46,6 +46,7 @@
   
   <modules>
     <module>ncau-java21-language</module>
+    <module>ncau-java21-api</module>
   </modules>
 
   <build>
