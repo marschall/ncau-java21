@@ -6,7 +6,7 @@
   <artifactId>ncau-java21</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <inceptionYear>20223</inceptionYear>
+  <inceptionYear>2023</inceptionYear>
   <url>https://github.com/netceteragroup/ncau-java21</url>
   <name>NCAU Java 21</name>
   <description>companion code for the NCAU Java 21</description>
