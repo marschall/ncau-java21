@@ -1,28 +1,18 @@
 package com.acme;
 
-import java.util.Objects;
-
 import com.acme.Reproducer.Expression.ConstantExpression;
 
 public class Reproducer {
 
   public static void main(String[] args) {
-    SExpressionPrinter printer = new SExpressionPrinter21Record();
+    SExpressionPrinter printer = new SExpressionPrinter();
     Expression constant = new ConstantExpression(2);
     System.out.println(printer.print(constant));
   }
 
-  interface SExpressionPrinter {
+  static final class SExpressionPrinter {
 
-    String print(Expression e);
-
-  }
-
-  static final class SExpressionPrinter21Record implements SExpressionPrinter {
-
-    @Override
     public String print(Expression e) {
-      Objects.requireNonNull(e);
       StringBuilder buffer = new StringBuilder();
       printTo(e, buffer);
       return buffer.toString();
@@ -37,14 +27,7 @@ public class Reproducer {
 
   sealed interface Expression {
 
-    int evaluate();
-
     record ConstantExpression(int i) implements Expression {
-
-      @Override
-      public int evaluate() {
-        return i;
-      }
 
     }
 
