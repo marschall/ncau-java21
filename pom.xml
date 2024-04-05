@@ -45,8 +45,9 @@
   </scm>
   
   <modules>
-    <module>ncau-java21-language</module>
     <module>ncau-java21-api</module>
+    <module>ncau-java21-benchmarks</module>
+    <module>ncau-java21-language</module>
   </modules>
 
   <build>
